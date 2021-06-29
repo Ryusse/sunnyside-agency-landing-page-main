@@ -1,0 +1,43 @@
+//Media queries
+@mixin query($breakpoint) {
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    // Write the media query.
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+    // If the breakpoint doesn't exist in the map.
+  } @else {
+    // Log a warning.
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+//Padding
+@mixin padding-movile() {
+  padding: 0 1.7rem 0 1.7rem;
+}
+
+@mixin padding-tablet(){
+  padding: 0 3rem 0 3rem;
+}
+
+@mixin padding-desktop(){
+  padding: 0 8rem 0 8rem;
+}
+
+//margin
+@mixin margin($top: 0,$left: 0, $bot: 0, $right: 0) {
+  margin: $top $left $bot $right;
+}
+
+//transitions
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}

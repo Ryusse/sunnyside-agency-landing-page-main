@@ -1,0 +1,68 @@
+.go-top-container {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+
+  .go-top-button {
+    position: absolute;
+    width: 0rem;
+    height: 0rem;
+    background-color: $dark-blue;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: grid;
+    .arrow {
+      transform: rotate(45deg) scale(0);
+    }
+  }
+}
+
+.show {
+  z-index: 60;
+
+  &.go-top-button {
+    animation: popup 0.3s ease-in-out;
+    width: 3.5rem;
+    height: 3.5rem;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+      background-color: $dark-blue-active;
+    }
+
+    .arrow {
+      transform: rotate(45deg) scale(1);
+      color: red;
+      position: absolute;
+      top: 38%;
+      justify-self: center;
+      width: 1rem;
+      height: 1rem;
+      background: transparent;
+      border-left: 0.3rem solid $white;
+      border-top: 0.3rem solid $white;
+      transition: all 200ms ease;
+    }
+  }
+}
+
+@keyframes popup {
+  0% {
+    width: 0rem;
+    height: 0rem;
+  }
+  50% {
+    width: 4rem;
+    height: 4rem;
+  }
+  100% {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}

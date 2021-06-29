@@ -1,0 +1,65 @@
+.testimonials {
+  @include padding-movile();
+
+  @include query(md) {
+    @include padding-tablet();
+}
+
+@include query(lg){
+
+  @include padding-desktop();
+}
+  h4 {
+    padding: 0;
+    margin-top: 5rem;
+  }
+  .container {
+    
+    margin: 5rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(15rem , 1fr));
+    gap: 5rem;
+
+    @include query(md){
+      gap: 3rem;
+    }
+
+    @include query(lg){
+      gap: 2.5rem;
+    }
+
+    .card {
+      .description {
+        color: $very-dark-grayish-blue;
+        margin: 1.8rem 0;
+        height: auto;
+
+        @include query(md){
+          height: 5rem;
+        }
+
+        @include query(lg){
+          height: 8rem;
+        }
+      }
+
+      .name {
+        color: $very-dark-desaturated-blue;
+
+        margin-bottom: 0.3rem;
+      }
+
+      .ocupation{
+        color: $grayish-blue;
+      }
+
+      img {
+        border-radius: 50%;
+        width: 4.5rem;
+        height: auto;
+        align-self: center;
+        justify-self: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.navbar {
+  .navbar-links {
+    .contact-button {
+      border-radius: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      background-color: $yellow;
+      color: $very-dark-desaturated-blue;
+      @include transition(all 0.3s ease-in-out);
+
+      @include query(md) {
+        background-color: $white;
+      }
+
+      &:hover {
+        background-color: $yellow-active;
+
+        @include query(md) {
+          color: $white;
+          background-color: $dark-blue-active;
+        }
+        
+      }
+    }
+  }
+}

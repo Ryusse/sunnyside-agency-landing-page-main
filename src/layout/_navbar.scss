@@ -1,0 +1,141 @@
+.navbar {
+  z-index: 1;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  background-color: transparent;
+
+  @include padding-movile();
+
+  @include query(md) {
+    @include padding-tablet();
+  }
+
+  .logo {
+    color: $white;
+    justify-self: start;
+    align-self: center;
+  }
+
+  .hamburger {
+    cursor: pointer;
+    justify-self: end;
+    align-self: center;
+
+    @include query(md) {
+      display: none;
+    }
+
+    .line {
+      width: 1.5rem;
+      height: 2px;
+      background-color: $white;
+      margin: 6px;
+    }
+  }
+
+  .navbar-links {
+    display: none;
+    background-color: $white;
+
+    //desktop
+    @include query(md) {
+      background-color: transparent;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      align-items: center;
+      justify-self: end;
+      gap: 3rem;
+
+      .link {
+        a {
+          color: $white;
+          opacity: 0.8;
+          position: relative;
+          &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            margin: -5px 0;
+            background-color: $white;
+            visibility: hidden;
+            transform: scaleX(0);
+            @include transition(all 0.4s ease-in-out 0s);
+          }
+          &:hover:before {
+            visibility: visible;
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+
+    //movile
+    &.open {
+      position: absolute;
+      padding: 2rem 4rem;
+      top: 6rem;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      width: 80%;
+      height: 24rem;
+      display: grid;
+      pointer-events: all;
+      transition: all 1s ease-in-out;
+
+      @include query(xs) {
+        width: 87%;
+      }
+
+      li {
+        align-self: center;
+        justify-self: center;
+      }
+
+      .link {
+        a {
+          color: $dark-grayish-blue;
+          position: relative;
+          @include transition(all 0.4s ease-in-out 0s);
+          &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            margin: -5px 0;
+            background-color: $very-dark-desaturated-blue;
+            visibility: hidden;
+            transform: scaleX(0);
+            @include transition(all 0.4s ease-in-out 0s);
+          }
+
+          &:hover{
+            color: $very-dark-desaturated-blue;
+            &:before {
+              visibility: visible;
+              transform: scaleX(1);
+            }
+          }
+        }
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: -8%;
+        width: 0;
+        height: 0;
+        border-right: 1rem solid $white;
+        border-top: 1rem solid transparent;
+        border-left: 1rem solid transparent;
+        border-bottom: 1rem solid $white;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+
+
+//Colors
+$soft-red: hsl(7, 99%, 70%);
+$yellow: hsl(51, 100%, 49%);
+$yellow-active: hsl(51, 89%, 45%);
+$dark-desaturated-cyan: hsl(167, 40%, 24%);
+$dark-blue : hsl(198, 62%, 26%);
+$dark-blue-active : hsl(198, 75%, 37%);
+$dark-moderate-cyan: hsl(168, 34%, 41%);
+$moderate-cyan: #88CFC1;
+
+$very-dark-desaturated-blue: hsl(212, 27%, 19%);
+$very-dark-grayish-blue: hsl(213, 9%, 39%);
+$dark-grayish-blue: hsl(232, 10%, 55%);
+$grayish-blue: hsl(210, 4%, 67%);
+$white: hsl(0, 0%, 100%);
+
+//Fonts
+$barlow : 'Barlow', sans-serif;
+$fraunces :'Fraunces', serif;
+
+//Font Weight
+$normal: 400;
+$medium: 500;
+$bold: 600;
+$bold-2: 700;
+$black: 900;
+
+//Break points to media queries
+$breakpoints:  (
+  "xs": 25em, // 400px
+  "sm": 34em, // 544px
+  "md": 48em, // 768px
+  "lg": 60em, // 960px
+  "lg2": 70em, //1120
+  "xl": 80em, // 1280px
+  "xxl": 90em // 1440px
+);

@@ -1,0 +1,44 @@
+.home {
+  height: 35rem;
+  background: url("../images/mobile/image-header.jpg") no-repeat bottom;
+  background-size: cover;
+  padding: 1rem 0;
+
+  @include query(sm) {
+    height: 45rem;
+  }
+
+  @include query(md) {
+    background: url("../images/desktop/image-header.jpg") no-repeat bottom;
+    background-size: cover;
+    padding: 3rem 0;
+  }
+
+  @include query(xl) {
+    height: 50rem;
+  }
+
+  .title {
+    h1 {
+      color: $white;
+      text-align: center;
+      margin: 5rem 0 3rem 0;
+      @include query(sm) {
+        margin: 5rem 4rem 3rem 4rem;
+      }
+    }
+
+    .arrow {
+      width: 10%;
+      height: auto;
+      cursor: pointer;
+      @include query(md) {
+        width: 6%;
+      }
+
+      @include query(lg) {
+        width: 3%;
+      }
+    }
+  }
+}

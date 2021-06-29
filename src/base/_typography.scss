@@ -1,0 +1,120 @@
+body {
+  text-align: center;
+  font-size: calc(1.1rem + ((1vw - 0.48em) * 0.6944));
+  font-family: $barlow;
+  font-weight: $medium;
+
+  @include query(md) {
+    font-size: calc(0.8rem + ((1vw - 0.48em) * 0.6944));
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $fraunces;
+  font-weight: $black;
+}
+
+h1 {
+  font-size: calc(2.3rem + ((1vw - 0.48em) * 0.6944));
+  letter-spacing: 0.5rem;
+}
+
+h2 {
+  font-size: calc(1.9rem + ((1vw - 0.48em) * 0.6944));
+
+  @include query(md) {
+    font-size: calc(2rem + ((1vw - 0.48em) * 0.6944));
+  }
+}
+
+h3 {
+  font-size: calc(1.2rem + ((1vw - 0.48em) * 0.6944));
+}
+
+h4 {
+  color: $grayish-blue;
+  font-weight: $black;
+  letter-spacing: 0.2rem;
+  @include query(md) {
+    letter-spacing: 0.5rem;
+  }
+}
+
+//Navbar
+
+.navbar {
+  
+  .logo {
+    font-size: calc(1.8rem + ((1vw - 0.48em) * 0.6944));
+    font-weight: $black;
+  }
+
+  .navbar-links {
+    font-size: calc(1.2rem + ((1vw - 0.48em) * 0.6944));
+
+    @include query(md) {
+      font-size: calc(0.8rem + ((1vw - 0.48em) * 0.6944));
+    }
+
+    .contact-button {
+      font-family: $fraunces;
+      font-size: calc(1rem + ((1vw - 0.48em) * 0.6944));
+
+      @include query(md) {
+        font-size: calc(0.6rem + ((1vw - 0.48em) * 0.6944));
+      }
+    }
+  }
+}
+
+//About section
+
+.about {
+  .container {
+    .button-2 {
+      font-family: $fraunces;
+      font-weight: $black;
+    }
+  }
+}
+
+//Testimonials section
+
+.testimonials {
+  h4 {
+    font-size: calc(0.9rem + ((1vw - 0.48em) * 0.6944));
+  }
+  .container {
+    .card {
+      .name {
+        font-weight: $black;
+        font-family: $fraunces;
+        font-size: calc(1.2rem + ((1vw - 0.48em) * 0.6944));
+
+        @include query(md) {
+          font-size: calc(1rem + ((1vw - 0.48em) * 0.6944));
+        }
+      }
+
+      .ocupation {
+        font-size: calc(1rem + ((1vw - 0.48em) * 0.6944));
+
+        @include query(md) {
+          font-size: calc(0.7rem + ((1vw - 0.48em) * 0.6944));
+        }
+      }
+    }
+  }
+}
+
+//Footer section
+
+.footer {
+  .logo {
+    font-size: calc(2rem + ((1vw - 0.48em) * 0.6944));
+    font-weight: $black;
+  }
+}

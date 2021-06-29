@@ -1,0 +1,115 @@
+.footer {
+  background-color: $moderate-cyan;
+
+  display: grid;
+  @include padding-movile();
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+
+  .logo {
+    color: $dark-desaturated-cyan;
+    font-weight: $black;
+    opacity: 0.8;
+  }
+
+  ul {
+    li {
+      a {
+        color: $dark-desaturated-cyan;
+        opacity: 0.8; 
+      }
+    }
+  }
+
+  .nav {
+    align-self: center;
+    justify-self: center;
+
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+
+    li {
+      a {
+        color: $dark-desaturated-cyan;
+        opacity: 0.8;
+        position: relative;
+        @include transition(all 0.4s ease-in-out 0s);
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: 0;
+          margin: -5px 0;
+          background-color: $white;
+          visibility: hidden;
+          transform: scaleX(0);
+          @include transition(all 0.4s ease-in-out 0s);
+        }
+
+        &:hover{
+          color: $white;
+          &:before {
+            visibility: visible;
+            transform: scaleX(1);
+          }  
+        }
+      }
+    }
+  }
+
+  .contact {
+    align-self: center;
+    justify-self: center;
+    margin-top: 3.5rem;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+
+      li{
+        a{
+          @include transition(all 0.4s ease-in-out 0s);
+
+          &:hover{
+            color: $white;
+          }
+        }
+      }
+  }
+
+  .attribution {
+    margin-top: 3rem;
+    color: $dark-desaturated-cyan;
+    opacity: 0.6;
+    a {
+      color: $dark-desaturated-cyan;
+
+      position: relative;
+        @include transition(all 0.4s ease-in-out 0s);
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: 0;
+          margin: -5px 0;
+          background-color: $white;
+          visibility: hidden;
+          transform: scaleX(0);
+          @include transition(all 0.4s ease-in-out 0s);
+        }
+
+        &:hover{
+          color: $white;
+          &:before {
+            visibility: visible;
+            transform: scaleX(1);
+          }  
+        }
+      
+    }
+  }
+}
