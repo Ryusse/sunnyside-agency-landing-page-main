@@ -21,12 +21,13 @@
     cursor: pointer;
     justify-self: end;
     align-self: center;
+    @include transition(all 0.4s ease-in-out);
 
     @include query(md) {
       display: none;
     }
 
-    .line {
+    >div{
       width: 1.5rem;
       height: 2px;
       background-color: $white;
@@ -71,7 +72,6 @@
         }
       }
     }
-
     //movile
     &.open {
       position: absolute;
@@ -137,5 +137,6 @@
         border-bottom: 1rem solid $white;
       }
     }
+
   }
 }

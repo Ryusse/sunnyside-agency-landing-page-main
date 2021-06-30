@@ -1,5 +1,4 @@
 window.onscroll = function(){
-    console.log(document.documentElement.scrollTop )
     if(document.documentElement.scrollTop > 1000){
         document.querySelector('.go-top-button').classList.add('show');
     }else{
