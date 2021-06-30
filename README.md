@@ -2,6 +2,10 @@
 
 ![Design preview for the Sunnyside agency landing page coding challenge](./design/desktop-preview.jpg)
 
+## Preview
+
+![Sunnyside](https://happy-khorana-b4b092.netlify.app/)
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
