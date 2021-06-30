@@ -4,7 +4,7 @@
 
 ## Preview
 
-![Sunnyside](https://happy-khorana-b4b092.netlify.app/)
+[Sunnyside](https://happy-khorana-b4b092.netlify.app/)
 
 ## Welcome! 👋
 
